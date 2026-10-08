@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fhenix — Your tokens. Two modes. Live on Ethereum and Arbitrum.</title>
+    <meta name="description" content="Hold your tokens public, switch them confidential in one click. Built on encryption that survives quantum computers. Live on Ethereum and Arbitrum mainnet." />
+    <script>document.documentElement.classList.add("js");</script>
+    <link rel="preload" href="/fonts/GeistMono-Variable-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/Geist-Variable-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/ClashGrotesk-Medium.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/ClashGrotesk-Semibold.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="stylesheet" href="/src/styles/tokens.css" />
+    <link rel="stylesheet" href="/src/styles/base.css" />
+    <link rel="stylesheet" href="/src/styles/hero.css" />
+    <link rel="stylesheet" href="/src/styles/dollar.css" />
+    <link rel="stylesheet" href="/src/styles/sections.css" />
+    <link rel="stylesheet" href="/src/styles/mobile.css" />
+  </head>
+  <body>
+    <div class="page">
+      <!-- ============ NAV ============ -->
+      <header class="nav" data-anim="nav">
+        <div class="stage nav__stage">
+          <a class="nav__logo" href="/" aria-label="Fhenix home" data-anim="nav-logo">
+            <img src="/assets/fhenix-logo.svg" width="108" height="20" alt="" />
+          </a>
+          <nav class="nav__links" aria-label="Primary">
+            <button class="nav__link nav__link--menu" data-anim="nav-link" aria-haspopup="true" aria-expanded="false">
+              Developer
+              <img src="/assets/chevron-down.svg" width="24" height="24" alt="" />
+            </button>
+            <a class="nav__link" href="https://www.fhenix.io/blog" data-anim="nav-link">Blog</a>
+            <a class="nav__link" href="https://www.fhenix.io/research" data-anim="nav-link">Research</a>
+            <a class="nav__link" href="https://fheswagshop.fhenix.io/" data-anim="nav-link">FHE Shop</a>
+          </nav>
+          <a class="btn btn--nav" href="#quantum" data-anim="nav-cta">
+            <span>How it works</span>
+            <svg class="pix pix--plus" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+              <rect x="4" y="0" width="4" height="4" />
+              <rect x="0" y="4" width="4" height="4" />
+              <rect x="8" y="4" width="4" height="4" />
+              <rect x="4" y="8" width="4" height="4" />
+            </svg>
+          </a>
+        </div>
+      </header>
+
+      <!-- ============ HERO (Figma: Hero section 440:1012, "1.2") ============ -->
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="stage hero__stage">
+          <div class="field" aria-hidden="true">
+            <img class="field__ascii" src="/assets/ascii-field.webp" alt="" decoding="async" />
+            <div class="field__shade"></div>
+            <div class="field__bands"></div>
+          </div>
+
+          <p class="subtitle" data-anim="subtitle" data-type="words">Hold them public. Switch them confidential. Live on Ethereum and Arbitrum.</p>
+
+          <div class="title">
+            <div class="plate" aria-hidden="true">
+              <i class="plate__handle plate__handle--tl" data-anim="handle"></i>
+              <i class="plate__handle plate__handle--tr" data-anim="handle"></i>
+              <i class="plate__handle plate__handle--bl" data-anim="handle"></i>
+              <i class="plate__handle plate__handle--br" data-anim="handle"></i>
+            </div>
+            <h1 class="h1" id="hero-title" aria-label="Fhenix mainnet">
+              <span class="h1__line" data-decode aria-hidden="true"><span class="h1__paren">(</span><span class="h1__word">k4#?p(n&gt;39-2</span><span class="h1__paren">)</span></span>
+            </h1>
+          </div>
+
+          <p class="tagline" data-anim="tagline" data-type="words">Your tokens. Two modes.</p>
+
+          <div class="ctas">
+            <a class="btn btn--primary" href="#dual-mode" data-anim="cta" data-event="cta_wallet_click">
+              <span>Try the dual-mode wallet</span>
+              <svg class="pix pix--plus" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+                <rect x="4" y="0" width="4" height="4" />
+                <rect x="0" y="4" width="4" height="4" />
+                <rect x="8" y="4" width="4" height="4" />
+                <rect x="4" y="8" width="4" height="4" />
+              </svg>
+            </a>
+            <a class="btn btn--ghost" href="#play" data-anim="cta" data-event="game_play_click">
+              <span>Play encrypted games</span>
+              <svg class="pix pix--chev" width="8" height="12" viewBox="0 0 8 12" aria-hidden="true">
+                <rect x="0" y="0" width="4" height="4" />
+                <rect x="4" y="4" width="4" height="4" />
+                <rect x="0" y="8" width="4" height="4" />
+              </svg>
+            </a>
+          </div>
+
+          <p class="caption" data-anim="caption" data-type="words">Built on encryption that survives quantum computers.</p>
+
+          <div class="dollar" data-anim="dollar" aria-hidden="true">
+            <div class="dollar__rot">
+              <div class="dollar__base"></div>
+              <img class="dollar__ascii" src="/assets/ascii-bill.webp" alt="" decoding="async" />
+              <div class="dollar__tint"></div>
+              <div class="dollar__flow"></div>
+              <div class="dollar__window">
+                <img class="dollar__bill" src="/assets/bill-100.webp" alt="" decoding="async" />
+                <img class="dollar__bill-ascii" src="/assets/ascii-bill.webp" alt="" decoding="async" />
+                <i class="dollar__scan"></i>
+              </div>
+              <div class="dollar__reveal">
+                <img class="dollar__bill" src="/assets/bill-100.webp" alt="" decoding="async" />
+              </div>
+              <div class="dollar__coin">
+                <img src="/assets/usdc.svg" width="89" height="89" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 2. LIVE STRIP ============ -->
+      <section class="live" aria-label="Mainnet status" data-anim="strip">
+        <div class="stage live__stage">
+          <div class="live__item">
+            <span class="live__k">Mainnet</span>
+            <span class="live__v">Oct 21, 2026</span>
+          </div>
+          <div class="live__item">
+            <span class="live__k">Live on</span>
+            <span class="live__v live__logos">
+              <img src="/assets/logo-ethereum.png" alt="Ethereum" height="28" />
+              <img src="/assets/logo-arbitrum.png" alt="Arbitrum" height="28" />
+            </span>
+          </div>
+          <div class="live__item">
+            <span class="live__k">dApps live</span>
+            <span class="live__v"><span data-count="5">0</span> on day one</span>
+          </div>
+          <div class="live__item">
+            <span class="live__k">Testnet ops</span>
+            <span class="live__v"><span data-count="20">0</span>M+</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 3. DUAL-MODE WALLET ============ -->
+      <section class="block t-dark dual" id="dual-mode" aria-labelledby="dual-title">
+        <div class="stage block__stage dual__stage" data-corners>
+          <div class="dual__copy" data-reveal>
+            <p class="label"><span data-scramble>Dual-mode</span></p>
+            <h2 class="h2" id="dual-title">Your tokens.<br />Two modes.</h2>
+            <p class="lead">Hold a token publicly. Switch it confidential in one click. Switch back when you need to. Same wallet, same DeFi, no bridge, no new liquidity.</p>
+            <div class="actions">
+              <a class="btn btn--light" href="#dual-mode" data-event="cta_wallet_click" data-wallet-try>
+                <span>Try it</span>
+                <svg class="pix pix--plus" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect x="4" y="0" width="4" height="4"/><rect x="0" y="4" width="4" height="4"/><rect x="8" y="4" width="4" height="4"/><rect x="4" y="8" width="4" height="4"/></svg>
+              </a>
+              <a class="btn btn--ghost btn--ghost-light" href="#quantum">
+                <span>How it works</span>
+                <svg class="pix pix--chev" width="8" height="12" viewBox="0 0 8 12" aria-hidden="true"><rect x="0" y="0" width="4" height="4"/><rect x="4" y="4" width="4" height="4"/><rect x="0" y="8" width="4" height="4"/></svg>
+              </a>
+            </div>
+            <p class="fineprint">Wallet URL and name to be confirmed by Product. Until then this demo stands in.</p>
+          </div>
+
+          <div class="wallet" data-wallet data-reveal>
+            <div class="wallet__head">
+              <span class="wallet__label">Token mode</span>
+              <div class="wallet__toggle" role="tablist" aria-label="Token mode">
+                <button class="wallet__opt" type="button" role="tab" data-mode="confidential" aria-selected="false">Confidential</button>
+                <button class="wallet__opt is-on" type="button" role="tab" data-mode="public" aria-selected="true">Public</button>
+                <i class="wallet__thumb" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="wallet__card">
+              <span class="wallet__label">Balance</span>
+              <div class="wallet__balance" data-balance aria-live="polite">1,506.88</div>
+              <i class="wallet__rule" aria-hidden="true"></i>
+              <div class="wallet__row">
+                <span>transfer → 0x7a4f…c19b</span>
+                <span data-amount>- 475.56</span>
+              </div>
+            </div>
+            <p class="wallet__note" data-note>Public mode — balances visible onchain, like any <b>ERC-20</b>.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 4. PARTNER DAPPS ============ -->
+      <section class="block t-grey dapps" id="dapps" aria-labelledby="dapps-title">
+        <div class="stage block__stage">
+          <div class="block__head" data-reveal>
+            <p class="label"><span data-scramble>Live on day one</span></p>
+            <h2 class="h2" id="dapps-title">Five things you can use today.</h2>
+            <p class="lead">Partner dApps built on Fhenix, live with mainnet. Names, logos and links land from BD by Oct 14.</p>
+          </div>
+          <div class="dapps__grid" data-reveal-group>
+            <article class="dapp" data-reveal>
+              <div class="dapp__logo">01</div>
+              <h3 class="h3">Confidential AMM</h3>
+              <p>Swap without broadcasting your book.</p>
+              <a class="btn btn--small" href="#" data-event="dapp_launch_click"><span>Launch</span><svg class="pix pix--chev" width="8" height="12" viewBox="0 0 8 12" aria-hidden="true"><rect x="0" y="0" width="4" height="4"/><rect x="4" y="4" width="4" height="4"/><rect x="0" y="8" width="4" height="4"/></svg></a>
+              <span class="tbc">Partner · TBC</span>
+            </article>
+            <article class="dapp" data-reveal>
+              <div class="dapp__logo">02</div>
+              <h3 class="h3">Private lending</h3>
+              <p>Borrow without publishing your positions.</p>
+              <a class="btn btn--small" href="#" data-event="dapp_launch_click"><span>Launch</span><svg class="pix pix--chev" width="8" height="12" viewBox="0 0 8 12" aria-hidden="true"><rect x="0" y="0" width="4" height="4"/><rect x="4" y="4" width="4" height="4"/><rect x="0" y="8" width="4" height="4"/></svg></a>
+              <span class="tbc">Partner · TBC</span>
+            </article>
+            <article class="dapp" data-reveal>
+              <div class="dapp__logo">03</div>
+              <h3 class="h3">Dark pool</h3>
+              <p>Trade size without moving the market.</p>
+              <a class="btn btn--small" href="#" data-event="dapp_launch_click"><span>Launch</span><svg class="pix pix--chev" width="8" height="12" viewBox="0 0 8 12" aria-hidden="true"><rect x="0" y="0" width="4" height="4"/><rect x="4" y="4" width="4" height="4"/><rect x="0" y="8" width="4" height="4"/></svg></a>
+              <span class="tbc">Partner · TBC</span>
+            </article>
+            <article class="dapp" data-reveal>
+              <div class="dapp__logo">04</div>
+              <h3 class="h3">Encrypted payments</h3>
+              <p>Prove what's needed. Reveal nothing else.</p>
+              <a class="btn btn--small" href="#" data-event="dapp_launch_click"><span>Launch</span><svg class="pix pix--chev" width="8" height="12" viewBox="0 0 8 12" aria-hidden="true"><rect x="0" y="0" width="4" height="4"/><rect x="4" y="4" width="4" height="4"/><rect x="0" y="8" width="4" height="4"/></svg></a>
+              <span class="tbc">Partner · TBC</span>
+            </article>
+            <article class="dapp" data-reveal>
+              <div class="dapp__logo">05</div>
+              <h3 class="h3">Private vault</h3>
+              <p>Strategies nobody can copy-trade.</p>
+              <a class="btn btn--small" href="#" data-event="dapp_launch_click"><span>Launch</span><svg class="pix pix--chev" width="8" height="12" viewBox="0 0 8 12" aria-hidden="true"><rect x="0" y="0" width="4" height="4"/><rect x="4" y="4" width="4" height="4"/><rect x="0" y="8" width="4" height="4"/></svg></a>
+              <span class="tbc">Partner · TBC</span>
+            </article>
+            <a class="dapp dapp--empty" href="https://mailchi.mp/8566f2eff346/fhenixpartner" target="_blank" rel="noopener" data-reveal>
+              <div class="dapp__logo dapp__logo--plus">+</div>
+              <h3 class="h3">Your dApp here</h3>
+              <p>Building something confidential? Apply to partner.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 5. PLAY ============ -->
+      <section class="block t-black play" id="play" aria-labelledby="play-title">
+        <div class="stage block__stage" data-corners>
+          <div class="block__head" data-reveal>
+            <p class="label"><span data-scramble>Play</span></p>
+            <h2 class="h2" id="play-title">Games you can't cheat at.</h2>
+            <p class="lead">The board, the dice and the bluff are encrypted onchain. Nobody can peek, not even the house.</p>
+          </div>
+          <div class="games">
+            <article class="game" data-reveal>
+              <div class="game__visual game__visual--dice" aria-hidden="true">
+                <div class="die" data-die><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="die" data-die><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+                <div class="die die--hidden" data-die><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><span class="die__lock">?</span></div>
+              </div>
+              <div class="game__body">
+                <h3 class="h3">FHE Liar's Dice</h3>
+                <p>Bluff with dice nobody can see. The reveal happens onchain, encrypted until the call.</p>
+                <a class="btn btn--light" href="#" data-event="game_play_click"><span>Play now</span><svg class="pix pix--plus" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect x="4" y="0" width="4" height="4"/><rect x="0" y="4" width="4" height="4"/><rect x="8" y="4" width="4" height="4"/><rect x="4" y="8" width="4" height="4"/></svg></a>
+              </div>
+            </article>
+            <article class="game" data-reveal>
+              <div class="game__visual game__visual--hunt" aria-hidden="true">
+                <div class="hunt" data-hunt></div>
+              </div>
+              <div class="game__body">
+                <h3 class="h3">FHE Hunt</h3>
+                <p>Find the hidden cell. The board stays encrypted until you tap, so nobody can scan it first.</p>
+                <a class="btn btn--light" href="#" data-event="game_play_click"><span>Play now</span><svg class="pix pix--plus" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect x="4" y="0" width="4" height="4"/><rect x="0" y="4" width="4" height="4"/><rect x="8" y="4" width="4" height="4"/><rect x="4" y="8" width="4" height="4"/></svg></a>
+              </div>
+            </article>
+          </div>
+          <div class="chips" data-reveal>
+            <span class="chips__k">Community games</span>
+            <a class="chip" href="#">Encrypted poker <em>@builder</em></a>
+            <a class="chip" href="#">Sealed-bid auction <em>@builder</em></a>
+            <a class="chip" href="#">Rock, paper, cipher <em>@builder</em></a>
+            <span class="chip chip--ghost">Game links and handles from Community</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 6. QUANTUM-SAFE ============ -->
+      <section class="block t-teal quantum" id="quantum" aria-labelledby="quantum-title">
+        <div class="stage block__stage quantum__stage" data-corners>
+          <div class="quantum__copy" data-reveal>
+            <p class="label"><span data-scramble>Quantum-safe</span></p>
+            <h2 class="h2" id="quantum-title">Built for after quantum.</h2>
+            <ol class="lines">
+              <li><span class="lines__n">01</span><span>The maths under Fhenix is lattice-based.</span></li>
+              <li><span class="lines__n">02</span><span>It is the family NIST picked for the post-quantum era.</span></li>
+              <li><span class="lines__n">03</span><span>Most of crypto will have to migrate. This won't.</span></li>
+            </ol>
+            <div class="actions">
+              <a class="btn btn--light" href="https://www.fhenix.io/research"><span>Read the research</span><svg class="pix pix--chev" width="8" height="12" viewBox="0 0 8 12" aria-hidden="true"><rect x="0" y="0" width="4" height="4"/><rect x="4" y="4" width="4" height="4"/><rect x="0" y="8" width="4" height="4"/></svg></a>
+            </div>
+            <p class="fineprint">Wording to be signed off by Research.</p>
+          </div>
+          <div class="quantum__visual" data-reveal>
+            <img src="/assets/anim-press-button.gif" width="800" height="800" alt="A confidential transaction computed onchain while its state stays encrypted" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 7. QUESTS + SWAG ============ -->
+      <section class="block t-light quests" id="quests" aria-labelledby="quests-title">
+        <div class="stage block__stage">
+          <div class="block__head" data-reveal>
+            <p class="label"><span data-scramble>Quests + swag</span></p>
+            <h2 class="h2" id="quests-title">Do something. Post it. Get paid in swag.</h2>
+            <p class="lead">Every quest you finish in October counts. Whoever we capture now is first in line in November.</p>
+          </div>
+
+          <ol class="steps" data-reveal>
+            <li class="step"><i class="step__ico step__ico--do"></i><b>Do</b><span>Switch a token, play a game, launch a dApp</span></li>
+            <li class="step"><i class="step__ico step__ico--post"></i><b>Post</b><span>Share it on X with your handle</span></li>
+            <li class="step"><i class="step__ico step__ico--earn"></i><b>Earn</b><span>Credits land in your quest account</span></li>
+            <li class="step"><i class="step__ico step__ico--spend"></i><b>Spend</b><span>Trade credits for swag in the shop</span></li>
+          </ol>
+
+          <div class="snag" data-reveal>
+            <div class="snag__inner">
+              <span class="label"><span>Snag quests</span></span>
+              <p>The Snag quest widget embeds here. Three live quests on Oct 21: follow on X, switch a token, play a game.</p>
+              <a class="btn btn--primary" href="#" data-event="quest_start"><span>Start a quest</span><svg class="pix pix--plus" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect x="4" y="0" width="4" height="4"/><rect x="0" y="4" width="4" height="4"/><rect x="8" y="4" width="4" height="4"/><rect x="4" y="8" width="4" height="4"/></svg></a>
+            </div>
+          </div>
+
+          <div class="shop" data-reveal>
+            <div class="shop__head">
+              <p class="label"><span data-scramble>Fhenix shop</span></p>
+              <a class="link" href="https://fheswagshop.fhenix.io/" target="_blank" rel="noopener">View all <svg class="pix pix--chev" width="8" height="12" viewBox="0 0 8 12" aria-hidden="true"><rect x="0" y="0" width="4" height="4"/><rect x="4" y="4" width="4" height="4"/><rect x="0" y="8" width="4" height="4"/></svg></a>
+            </div>
+            <div class="shop__grid">
+              <a class="product" href="https://fheswagshop.fhenix.io/" target="_blank" rel="noopener">
+                <img src="/assets/shop-tshirt.jpg" alt="Fhenix t-shirt" loading="lazy" />
+                <span class="product__name">T-shirt</span><span class="product__meta">Earn it with credits</span>
+              </a>
+              <a class="product" href="https://fheswagshop.fhenix.io/" target="_blank" rel="noopener">
+                <img src="/assets/shop-jersey.jpg" alt="Fhenix jersey" loading="lazy" />
+                <span class="product__name">Jersey</span><span class="product__meta">Earn it with credits</span>
+              </a>
+              <a class="product" href="https://fheswagshop.fhenix.io/" target="_blank" rel="noopener">
+                <img src="/assets/shop-mic.jpg" alt="Fhenix microphone" loading="lazy" />
+                <span class="product__name">Mic</span><span class="product__meta">Earn it with credits</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 8. GENESIS SLOT (hidden until November; add ?genesis or #genesis to the URL to preview) ============ -->
+      <section class="block t-cyan genesis" id="genesis" aria-labelledby="genesis-title" hidden>
+        <div class="stage block__stage genesis__stage" data-corners>
+          <div data-reveal>
+            <p class="label"><span data-scramble>Genesis</span></p>
+            <h2 class="h2" id="genesis-title">Something is coming in November.</h2>
+            <p class="lead">Finish a quest in October and you are on the allowlist. Art, date and mint details land with the reveal.</p>
+            <form class="capture" action="#" onsubmit="return false">
+              <input type="email" placeholder="Email address" aria-label="Email address" />
+              <button class="btn btn--primary" type="submit" data-event="genesis_join"><span>Join the allowlist</span></button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 9. TEAM + BACKERS ============ -->
+      <section class="block t-grey team" aria-labelledby="team-title">
+        <div class="stage block__stage">
+          <div class="block__head" data-reveal>
+            <p class="label"><span data-scramble>Team</span></p>
+            <h2 class="h2" id="team-title">Built by GOATs.</h2>
+          </div>
+          <div class="team__grid">
+            <article class="person" data-reveal><img src="/assets/team-guy-zyskind.avif" alt="Guy Zyskind" loading="lazy" /><b>Guy Zyskind</b><span class="role">Founder</span><p>Assistant Professor of Electrical &amp; Computer Engineering, University of Miami.</p></article>
+            <article class="person" data-reveal><img src="/assets/team-guy-itzhaki.avif" alt="Guy Itzhaki" loading="lazy" /><b>Guy Itzhaki</b><span class="role">CEO</span><p>Ex-Director, FHE and Blockchain Business Development at Intel.</p></article>
+            <article class="person" data-reveal><img src="/assets/team-ravital-solomon.avif" alt="Ravital Solomon" loading="lazy" /><b>Ravital Solomon</b><span class="role">Head of Research</span><p>Cryptographer and founder of Sunscreen, acquired by Fhenix.</p></article>
+            <article class="person" data-reveal><img src="/assets/team-chris-peikert.avif" alt="Chris Peikert" loading="lazy" /><b>Chris Peikert</b><span class="role">Researcher</span><p>Professor of Computer Science and Engineering, University of Michigan.</p></article>
+            <article class="person" data-reveal><img src="/assets/team-anzhelika-hrokholska.avif" alt="Anzhelika Hrokholska" loading="lazy" /><b>Anzhelika Hrokholska</b><span class="role">Head of Marketing</span><p>Ex-Binance, with 7+ years of Web3 marketing behind her.</p></article>
+            <article class="person" data-reveal><img src="/assets/team-yonatan-erez.avif" alt="Yonatan Erez" loading="lazy" /><b>Yonatan Erez</b><span class="role">Head of Product</span><p>Leads product vision and execution to bring privacy technology to real-world adoption.</p></article>
+            <article class="person" data-reveal><img src="/assets/team-lior-bondarevski.avif" alt="Lior Bondarevski" loading="lazy" /><b>Lior Bondarevski</b><span class="role">Head of Engineering</span><p>Ex. Sentinel One.</p></article>
+            <article class="person" data-reveal><img src="/assets/team-ido-rab.avif" alt="Ido Rab" loading="lazy" /><b>Ido Rab</b><span class="role">Market Research Lead</span><p>6+ years in blockchain strategy &amp; marketing.</p></article>
+            <article class="person" data-reveal><img src="/assets/team-rogue-rotkosky.avif" alt="Rogue Rotkosky" loading="lazy" /><b>Rogue Rotkosky</b><span class="role">Applications Lead</span><p>Ergonomics-focused Web3 engineer and founder.</p></article>
+            <article class="person" data-reveal><img src="/assets/team-radhika-rungta.avif" alt="Radhika Rungta" loading="lazy" /><b>Radhika Rungta</b><span class="role">Marketing &amp; Social</span><p>Ex-Marketer, Red Bull India.</p></article>
+          </div>
+
+          <div class="block__head block__head--tight" data-reveal>
+            <p class="label"><span data-scramble>Backed by leaders</span></p>
+          </div>
+          <div class="backers" data-reveal>
+            <div class="backer"><img src="/assets/inv-tandem.png" alt="Tandem by Offchain Labs" loading="lazy" /></div>
+            <div class="backer"><img src="/assets/inv-multicoin.png" alt="Multicoin Capital" loading="lazy" /></div>
+            <div class="backer"><img src="/assets/inv-hack.png" alt="Hack VC" loading="lazy" /></div>
+            <div class="backer"><img src="/assets/inv-collider.png" alt="Collider" loading="lazy" /></div>
+            <div class="backer"><img src="/assets/inv-bankless.png" alt="Bankless" loading="lazy" /></div>
+            <div class="backer"><img src="/assets/inv-hashkey.png" alt="HashKey Capital" loading="lazy" /></div>
+            <div class="backer"><img src="/assets/inv-gsr.png" alt="GSR" loading="lazy" /></div>
+            <div class="backer"><img src="/assets/inv-metaplanet.png" alt="Metaplanet" loading="lazy" /></div>
+            <div class="backer"><img src="/assets/inv-node.png" alt="Node Capital" loading="lazy" /></div>
+            <div class="backer"><img src="/assets/inv-amber.png" alt="Amber Group" loading="lazy" /></div>
+            <div class="backer"><img src="/assets/inv-soravc.png" alt="Sora Ventures" loading="lazy" /></div>
+            <div class="backer"><img src="/assets/inv-primitive.png" alt="Primitive Ventures" loading="lazy" /></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 10. FAQ ============ -->
+      <section class="block t-light faq" aria-labelledby="faq-title">
+        <div class="stage block__stage faq__stage">
+          <div class="block__head" data-reveal>
+            <p class="label"><span data-scramble>FAQ</span></p>
+            <h2 class="h2" id="faq-title">Questions, answered plainly.</h2>
+          </div>
+          <div class="faq__list" data-reveal>
+            <details class="qa" open>
+              <summary>What is Fhenix, in one line?</summary>
+              <div class="qa__body"><p>A layer that gives any token on Ethereum or Arbitrum a confidential mode, so balances and transfers can be hidden onchain and shown again when you choose.</p></div>
+            </details>
+            <details class="qa">
+              <summary>What does "two modes" mean?</summary>
+              <div class="qa__body"><p>Public mode works like any ERC-20: balances are visible onchain. Confidential mode encrypts the same token with fully homomorphic encryption. You switch between them in one click, with no wrapper, no bridge and no new liquidity.</p></div>
+            </details>
+            <details class="qa">
+              <summary>Where is it live?</summary>
+              <div class="qa__body"><p>Mainnet on Ethereum and Arbitrum from Oct 21, 2026, with five partner dApps on day one. CoFHE, the engine underneath, has been running on Ethereum Sepolia, Arbitrum Sepolia and Base Sepolia testnets.</p></div>
+            </details>
+            <details class="qa">
+              <summary>Why "survives quantum computers"?</summary>
+              <div class="qa__body"><p>The encryption is lattice-based, the family of maths NIST selected for the post-quantum era. Most of today's crypto signatures will need to migrate. This design does not.</p></div>
+            </details>
+            <details class="qa">
+              <summary>How do quests and swag work?</summary>
+              <div class="qa__body"><p>Do something on mainnet, post it on X, earn credits, spend them in the Fhenix shop. Quests run through the Snag widget on this page. Everyone who completes one in October is on the November allowlist.</p></div>
+            </details>
+            <details class="qa">
+              <summary>I'm a developer. Where do I start?</summary>
+              <div class="qa__body"><p>Confidential logic is one Solidity import away. Docs, SDK and demos live under the Developer menu in the header, and the research is at <a href="https://www.fhenix.io/research">fhenix.io/research</a>.</p></div>
+            </details>
+          </div>
+          <div class="faq__cta" data-reveal>
+            <span>Still curious?</span>
+            <a class="btn btn--ghost" href="https://x.com/FhenixIO" target="_blank" rel="noopener" data-event="x_follow_click"><span>Follow on X</span><svg class="pix pix--chev" width="8" height="12" viewBox="0 0 8 12" aria-hidden="true"><rect x="0" y="0" width="4" height="4"/><rect x="4" y="4" width="4" height="4"/><rect x="0" y="8" width="4" height="4"/></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 11. FINAL CTA ============ -->
+      <section class="block t-cyan final" aria-labelledby="final-title">
+        <div class="field field--final" aria-hidden="true"><img class="field__ascii" src="/assets/ascii-field.webp" alt="" loading="lazy" decoding="async" /></div>
+        <div class="stage block__stage final__stage">
+          <div data-reveal>
+            <h2 class="h2" id="final-title">Encrypt everything.</h2>
+            <p class="lead">Be early where early matters. Start a quest today and you are on the list for November.</p>
+            <div class="actions actions--center">
+              <a class="btn btn--primary" href="#quests" data-event="quest_start"><span>Start a quest</span><svg class="pix pix--plus" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect x="4" y="0" width="4" height="4"/><rect x="0" y="4" width="4" height="4"/><rect x="8" y="4" width="4" height="4"/><rect x="4" y="8" width="4" height="4"/></svg></a>
+              <a class="btn btn--ghost" href="https://x.com/FhenixIO" target="_blank" rel="noopener" data-event="x_follow_click"><span>Follow on X</span><svg class="pix pix--chev" width="8" height="12" viewBox="0 0 8 12" aria-hidden="true"><rect x="0" y="0" width="4" height="4"/><rect x="4" y="4" width="4" height="4"/><rect x="0" y="8" width="4" height="4"/></svg></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FOOTER ============ -->
+      <footer class="footer">
+        <div class="footer__bill" aria-hidden="true"><img src="/assets/ascii-bill.webp" alt="" loading="lazy" /></div>
+        <div class="stage footer__stage">
+          <img class="footer__mark" src="/assets/fhenix-wordmark.svg" alt="Fhenix" />
+          <nav class="footer__links" aria-label="Footer">
+            <a href="https://www.fhenix.io/blog">Blog</a>
+            <a href="https://cofhe-docs.fhenix.zone/">Docs</a>
+            <a href="https://www.fhenix.io/careers">Careers</a>
+            <a href="https://www.fhenix.io/legal">Legal</a>
+            <a href="https://www.fhenix.io/brand-assets">Brand assets</a>
+            <a href="#" class="footer__status"><i></i>Mainnet status</a>
+          </nav>
+          <div class="footer__social">
+            <a href="https://discord.gg/FuVgxrvJMY" aria-label="Discord"><img src="/assets/icon-discord.svg" width="20" height="20" alt="" /></a>
+            <a href="https://x.com/FhenixIO" aria-label="X"><img src="/assets/icon-x.svg" width="20" height="20" alt="" /></a>
+            <a href="https://t.me/fhenix" aria-label="Telegram"><img src="/assets/icon-telegram.svg" width="20" height="20" alt="" /></a>
+          </div>
+          <p class="footer__copy">(C) 2026 Fhenix. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- mobile sticky CTA -->
+    <div class="sticky" data-sticky aria-hidden="true">
+      <a class="btn btn--primary" href="#dual-mode" data-event="cta_wallet_click"><span>Try the dual-mode wallet</span></a>
+    </div>
+
+    <script type="module" src="/src/js/main.js"></script>
+  </body>
+</html>

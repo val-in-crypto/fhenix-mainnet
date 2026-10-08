@@ -1,0 +1,127 @@
+/* ------------------------------------------------------------------
+   Dollar panel. Figma builds it as a 1238×618 composition rotated
+   -90° and parked at the right edge of the hero. We keep the same
+   approach so every Figma coordinate maps 1:1.
+   ------------------------------------------------------------------ */
+.dollar {
+  position: absolute;
+  left: 1196px;
+  top: -382px;
+  width: 618px;
+  height: 1238px;
+  pointer-events: none;
+}
+
+.dollar__rot {
+  position: absolute;
+  left: -310px;
+  top: 310px;
+  width: 1238px;
+  height: 618px;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+.dollar__base,
+.dollar__ascii,
+.dollar__tint,
+.dollar__flow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10px;
+  aspect-ratio: 2889 / 1104;
+}
+
+.dollar__base {
+  background: var(--white);
+}
+
+.dollar__ascii {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  mix-blend-mode: hard-light;
+  opacity: 0.9;
+}
+
+.dollar__tint {
+  background: var(--ascii-blue);
+  mix-blend-mode: overlay;
+}
+
+.dollar__flow {
+  mix-blend-mode: overlay;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0) 56.47%, var(--grad-teal) 74%, rgba(255, 255, 255, 0) 84.95%),
+    linear-gradient(90deg, rgba(255, 255, 255, 0) 30%, var(--grad-red) 36.98%, rgba(255, 255, 255, 0) 41.93%);
+  will-change: transform;
+}
+
+/* the decrypted window */
+.dollar__window {
+  position: absolute;
+  left: 0.07%;
+  right: -0.12%;
+  top: 10px;
+  aspect-ratio: 1200 / 505;
+  clip-path: inset(0 38.26% 4.66% 35.47%);
+  overflow: hidden;
+}
+
+.dollar__bill,
+.dollar__bill-ascii {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dollar__bill-ascii {
+  opacity: 0;
+  background: var(--white);
+}
+
+.dollar__scan {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 2px;
+  background: var(--grad-teal);
+  box-shadow: 0 0 12px 2px rgba(36, 245, 221, 0.8);
+  opacity: 0;
+}
+
+/* pointer-driven reveal (desktop) */
+.dollar__reveal {
+  position: absolute;
+  left: 0.07%;
+  right: -0.12%;
+  top: 10px;
+  aspect-ratio: 1200 / 505;
+  clip-path: inset(0 100% 0 0);
+  opacity: 0;
+}
+
+/* USDC coin */
+.dollar__coin {
+  position: absolute;
+  left: 69.76%;
+  right: 13.08%;
+  top: 26.73%;
+  bottom: 32.51%;
+  display: grid;
+  place-items: center;
+  background: var(--usdc);
+  border-radius: 999px;
+  opacity: 0.5;
+  overflow: hidden;
+}
+
+.dollar__coin img {
+  width: 89px;
+  height: 89px;
+  transform: rotate(90deg);
+}

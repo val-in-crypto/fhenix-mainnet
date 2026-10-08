@@ -1,0 +1,30 @@
+:root {
+  /* Brand colours (Figma: Hero section 435:915) */
+  --cyan: #00ddde;
+  --ink: #001623;
+  --teal: #00314e;
+  --white: #ffffff;
+  --usdc: #2775ca;
+  --paren: rgba(0, 49, 78, 0.08);
+  --grad-teal: #24f5dd;
+  --grad-teal-soft: #75ffed;
+  --grad-blue: #244bf5;
+  --grad-red: #f52428;
+  --ascii-blue: #24a9f5;
+  --glass: rgba(217, 217, 217, 0.1);
+
+  /* Type */
+  --font-display: "Clash Grotesk", "Inter", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --font-sans: "Geist", "Inter", system-ui, sans-serif;
+
+  /* Layout */
+  --frame: 1440px;
+  --gutter: 80px;
+  --nav-h: 64px;
+  --hero-h: 746px;
+  --strip-h: 125px;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
