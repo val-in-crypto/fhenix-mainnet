@@ -1,6 +1,8 @@
 import { gsap } from './motion.js';
+import { initQuestJourney } from './quest-journey.js';
 
 export function initFigmaHome() {
+  initQuestJourney();
   // Scale the editable 720 × 708 Figma composition, preserving SVG geometry.
   const tokenScene = document.querySelector('[data-token-scene]');
   if (tokenScene) {
