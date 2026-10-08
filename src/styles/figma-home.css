@@ -415,3 +415,30 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
 @media(max-width:1023px) {
   .hero .h1.h1--mainnet { font-size:clamp(44px,16vw,64px); top:152px; height:72px; }
 }
+
+/* One centered reading axis throughout the mobile page. */
+@media(max-width:1023px) {
+  .block,.hero .caption { text-align:center; }
+  .block__head,.block .lead { margin-left:auto; margin-right:auto; }
+  .block .actions { justify-content:center; }
+  .hero .caption { left:50%; transform:translateX(-50%); }
+  .dapp { align-items:center; }
+  .dapp p { margin-left:auto; margin-right:auto; }
+  .dapp .btn--small { align-self:center; }
+  .quantum .lines li { flex-direction:column; align-items:center; gap:12px; }
+  .quantum .lines__n { padding-top:0; }
+  .snag__inner { justify-items:center; }
+  .shop__head { flex-direction:column; justify-content:center; gap:20px; }
+  .product__name,.product__meta { text-align:center; }
+  .team .person { text-align:center; }
+  .value__art p { margin-left:auto; margin-right:auto; text-align:center; }
+  .qa summary { position:relative; justify-content:center; padding-left:42px; padding-right:42px; text-align:center; }
+  .qa summary::after { position:absolute; right:20px; }
+  .qa__body { text-align:center; }
+  .quest-journey { --journey-axis:12px; }
+  .quest-journey .step { display:flex; flex-direction:column; align-items:center; justify-content:center; padding:28px 48px; gap:12px; min-height:210px; }
+  .quest-journey .step__icon { margin:0; }
+  .quest-journey .step b { margin:0; font-size:28px; }
+  .quest-journey .step>span { padding:0; font-size:16px; text-align:center; }
+  .quest-journey .step::after { margin-left:24px; font-size:9px; }
+}
