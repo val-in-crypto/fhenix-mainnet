@@ -411,3 +411,7 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
 @media(max-width:1023px) {
  .dual .lead { font-size:16px; line-height:1.5; }
 }
+
+@media(max-width:1023px) {
+  .hero .h1.h1--mainnet { font-size:clamp(44px,16vw,64px); top:152px; height:72px; }
+}

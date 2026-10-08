@@ -29,6 +29,7 @@ export function createDecoder(el, options = {}) {
   let stepTimer = null;
 
   function render(word, upTo, hover = null) {
+    el.closest('.h1')?.classList.toggle('h1--mainnet', word === '(mainnet)');
     let html = "";
     for (let i = 0; i < word.length; i++) {
       const ch = word[i];
