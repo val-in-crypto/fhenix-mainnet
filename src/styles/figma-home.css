@@ -422,11 +422,13 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
   .block__head,.block .lead { margin-left:auto; margin-right:auto; }
   .block .actions { justify-content:center; }
   .hero .caption { left:50%; transform:translateX(-50%); }
-  .dapp { align-items:center; }
-  .dapp p { margin-left:auto; margin-right:auto; }
-  .dapp .btn--small { align-self:center; }
-  .quantum .lines li { flex-direction:column; align-items:center; gap:12px; }
-  .quantum .lines__n { padding-top:0; }
+  .dapp { align-items:stretch; text-align:left; }
+  .dapp p { margin-left:0; margin-right:auto; }
+  .dapp .btn--small { align-self:flex-start; }
+  .quantum { text-align:left; }
+  .quantum .actions { justify-content:flex-start; }
+  .quantum .lines li { flex-direction:row; align-items:stretch; gap:20px; }
+  .quantum .lines__n { padding-top:8px; }
   .snag__inner { justify-items:center; }
   .shop__head { flex-direction:column; justify-content:center; gap:20px; }
   .product__name,.product__meta { text-align:center; }
@@ -441,4 +443,14 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
   .quest-journey .step b { margin:0; font-size:28px; }
   .quest-journey .step>span { padding:0; font-size:16px; text-align:center; }
   .quest-journey .step::after { margin-left:24px; font-size:9px; }
+}
+
+/* Keep the shop link after products in mobile reading and focus order. */
+.shop { display:grid; grid-template-columns:1fr auto; }
+.shop__head { grid-column:1; grid-row:1; }
+.shop__grid { grid-column:1 / -1; grid-row:2; }
+.shop__view-all { grid-column:2; grid-row:1; align-self:center; margin-bottom:20px; }
+@media(max-width:1023px) {
+ .shop { grid-template-columns:minmax(0,1fr); }
+ .shop__view-all { grid-column:1; grid-row:3; justify-self:center; margin:28px 0 0; }
 }
