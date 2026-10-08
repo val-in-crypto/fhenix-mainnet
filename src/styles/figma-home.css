@@ -432,7 +432,7 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
   .snag__inner { justify-items:center; }
   .shop__head { flex-direction:column; justify-content:center; gap:20px; }
   .product__name,.product__meta { text-align:center; }
-  .team .person { text-align:center; }
+  .team .person { text-align:left; }
   .value__art p { margin-left:auto; margin-right:auto; text-align:center; }
   .qa summary { position:relative; justify-content:center; padding-left:42px; padding-right:42px; text-align:center; }
   .qa summary::after { position:absolute; right:20px; }
