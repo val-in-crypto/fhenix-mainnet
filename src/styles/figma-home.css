@@ -454,3 +454,7 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
  .shop { grid-template-columns:minmax(0,1fr); }
  .shop__view-all { grid-column:1; grid-row:3; justify-self:center; margin:28px 0 0; }
 }
+
+@media(max-width:1023px) {
+  .play-title__ending { display:block; }
+}
