@@ -498,3 +498,8 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
  .value__art--fusd { left:auto; width:100%; aspect-ratio:800 / 560; }
  .value__art--fusd .fusd-scene { overflow:hidden; }
 }
+
+/* Keep the mobile token illustration free of construction lines. */
+@media(max-width:767px) {
+ .dual .token-grid { display:none; }
+}
