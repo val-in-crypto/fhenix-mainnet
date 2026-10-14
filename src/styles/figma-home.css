@@ -477,3 +477,10 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
  .fusd-layer,.fusd-cover,.fusd-announcement { opacity:1; }
  .value__art--fusd .fusd-caption { opacity:0; }
 }
+
+/* Supplied partner identities retain their original artwork and proportions. */
+.dapp__logo--image { width:72px; height:72px; background:transparent; }
+.dapp__logo--image img { display:block; width:100%; height:100%; object-fit:contain; }
+
+.dapp__logo--image { overflow:hidden; }
+.dapp__logo--image img[src$="fhenix-app-cover.png"] { transform:scale(1.8); }
