@@ -14,7 +14,7 @@ export function initFusdAnimation() {
     coin.innerHTML = '<image href="/assets/fusd-figma/coin.svg" x="-28.5" y="-24.5" width="57" height="49"/>';
     q('.fusd-coins').append(coin);
     coins.push(coin);
-    starts.push({ x: 840 + (i * 59 % 320), y: 35 + (i * 79 % 320), rotation: (i * 47 % 110) - 55 });
+    starts.push({ x: -690 - (i * 59 % 320), y: 35 + (i * 79 % 320), rotation: (i * 47 % 110) - 55 });
   }
   const layers = [...artwork.querySelectorAll('.fusd-layer')];
   const blur = q('.fusd-blur');
@@ -40,9 +40,9 @@ export function initFusdAnimation() {
       return;
     }
     timeline = gsap.timeline({ paused: true, repeat: -1, repeatDelay: .5 });
-    // Each original Figma coin crosses the section from the right edge to the left.
+    // Each original Figma coin crosses the section from the left edge to the right.
     timeline.to(coins, {
-      x: i => -690 - (i * 31 % 130),
+      x: i => 840 + (i * 31 % 130),
       y: i => 360 + Math.sin(i * 1.7) * 45,
       rotation: i => starts[i].rotation - 100,
       duration: 4.4, ease: 'sine.inOut', stagger: .035,
