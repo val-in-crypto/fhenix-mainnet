@@ -66,8 +66,8 @@ html { scroll-behavior:smooth; scroll-padding-top:80px; }
 .quests .block__head { margin-bottom:24px; }
 .step { height:168px; }
 .step__icon { width:29px; height:29px; margin-top:8px; }
-.snag { background:#0ad9dc0a; margin-bottom:24px; }
-.snag__inner { grid-template-columns:1fr auto; }
+.snag { background:transparent; border:0; margin-bottom:24px; }
+.snag__inner { grid-template-columns:1fr; justify-items:center; }
 .snag p { max-width:none; }
 .shop { padding-top:40px; }
 .shop__head .label { color:#009efa; gap:12px; font-size:18px; letter-spacing:0; }
