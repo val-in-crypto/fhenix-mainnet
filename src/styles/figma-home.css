@@ -462,3 +462,18 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
 /* Partner names and descriptions may wrap without crowding their action. */
 .dapps .dapp { height:auto; min-height:280px; }
 .dapps .dapp .btn--small { margin-top:auto; }
+
+/* fUSD: drifting coins → assembled layers → frosted coming-soon reveal. */
+.value__art--fusd { left:650px; top:0; width:780px; height:560px; }
+.fusd-scene { display:block; width:100%; height:auto; overflow:visible; }
+.fusd-announcement text { fill:white; font-family:var(--font-display); font-size:56px; font-weight:600; letter-spacing:-1px; }
+.fusd-layer,.fusd-cover,.fusd-announcement { opacity:0; }
+.value__art--fusd .fusd-caption { top:400px; right:55px; width:332px; margin:0; }
+@media(max-width:1023px) {
+ .value__art--fusd { position:relative; left:auto; top:auto; width:100%; max-width:660px; height:auto; aspect-ratio:780 / 560; margin:30px auto 0; }
+ .value__art--fusd .fusd-caption { position:absolute; top:auto; bottom:5%; right:10%; width:80%; margin:0; font-size:clamp(10px,2.7vw,13px); text-align:center; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .fusd-layer,.fusd-cover,.fusd-announcement { opacity:1; }
+ .value__art--fusd .fusd-caption { opacity:0; }
+}
