@@ -29,7 +29,7 @@ export function initFusdAnimation() {
     gsap.set(coins, { x: i => starts[i].x, y: i => starts[i].y, rotation: i => starts[i].rotation, opacity: 1, scale: 1, transformOrigin: '50% 50%' });
     gsap.set(layers, { opacity: 0, y: 0, scale: 1, transformOrigin: '50% 50%' });
     gsap.set([cover, announcement], { opacity: 0, y: 0 });
-    gsap.set(caption, { opacity: 1 });
+    gsap.set(caption, { opacity: 1, clipPath: 'inset(0% 0% 0% 0%)' });
     gsap.set(blur, { attr: { stdDeviation: 0 } });
     if (reduced.matches) {
       gsap.set(coins, { opacity: 0 });
@@ -40,15 +40,35 @@ export function initFusdAnimation() {
       return;
     }
     timeline = gsap.timeline({ paused: true, repeat: -1, repeatDelay: .5 });
-    // Each original Figma coin crosses the section from the left edge to the right.
+    // Measure the caption in SVG coordinates so the wipe follows the coins on mobile too.
+    const artRect = artwork.getBoundingClientRect();
+    const captionRect = caption.getBoundingClientRect();
+    const unit = 800 / artRect.width;
+    const left = (captionRect.left - artRect.left) * unit;
+    const right = (captionRect.right - artRect.left) * unit;
+    const middle = (captionRect.top - artRect.top + captionRect.height / 2) * unit;
+    const spread = captionRect.height * unit / 2 + 12;
+    const lane = i => middle + Math.sin(i * 2.39996) * spread;
+    // The loose stream approaches from the left, then sweeps directly over the copy.
     timeline.to(coins, {
-      x: i => 840 + (i * 31 % 130),
-      y: i => 360 + Math.sin(i * 1.7) * 45,
-      rotation: i => starts[i].rotation - 100,
-      duration: 4.4, ease: 'sine.inOut', stagger: .035,
+      x: left - 36, y: lane,
+      rotation: i => starts[i].rotation - 65,
+      duration: 2.4, ease: 'power1.inOut', stagger: .02,
     }, 0);
-    timeline.to(coins, { opacity: 0, duration: .45, stagger: .035 }, 3.95);
-    timeline.to(caption, { opacity: 0, duration: .5 }, 4.7);
+    timeline.to(coins, {
+      x: right + 36, y: lane,
+      rotation: i => starts[i].rotation - 110,
+      duration: 1.4, ease: 'none', stagger: .012,
+    }, 3.15);
+    // Match the clipping edge to the leading coins rather than fading all the text.
+    const crossingDuration = 1.4;
+    const crossingWidth = right - left + 72;
+    timeline.to(caption, {
+      clipPath: 'inset(0% 0% 0% 100%)',
+      duration: crossingDuration * (right - left) / crossingWidth,
+      ease: 'none',
+    }, 3.15 + crossingDuration * 36 / crossingWidth);
+    timeline.to(coins, { x: '+=100', opacity: 0, duration: .4, stagger: .012, ease: 'power1.in' }, 4.55);
     timeline.fromTo(layers[0], { scale: .3, opacity: 0 }, { scale: 1, opacity: 1, duration: 1.2, ease: 'power2.out' }, 5.25);
     timeline.fromTo(layers[1], { y: -90, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2, ease: 'power3.out' }, 6.2);
     timeline.fromTo(layers[2], { y: -105, opacity: 0 }, { y: 0, opacity: 1, duration: 1.4, ease: 'power3.out' }, 7.1);
@@ -60,6 +80,7 @@ export function initFusdAnimation() {
     timeline.set(blur, { attr: { stdDeviation: 0 } }, 14.9);
     timeline.set(coins, { x: i => starts[i].x, y: i => starts[i].y, rotation: i => starts[i].rotation, scale: 1 }, 14.9);
     timeline.to(coins, { opacity: 1, duration: .7 }, 14.9);
+    timeline.set(caption, { opacity: 0, clipPath: 'inset(0% 0% 0% 0%)' }, 14.9);
     timeline.to(caption, { opacity: 1, duration: .7 }, 14.9);
     timeline.timeScale(1.25);
     sync();
@@ -72,5 +93,6 @@ export function initFusdAnimation() {
   new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
   document.addEventListener('visibilitychange', sync);
   reduced.addEventListener('change', build);
+  new ResizeObserver(build).observe(artwork);
   build();
 }
