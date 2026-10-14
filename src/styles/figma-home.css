@@ -458,3 +458,7 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
 @media(max-width:1023px) {
   .play-title__ending { display:block; }
 }
+
+/* Partner names and descriptions may wrap without crowding their action. */
+.dapps .dapp { height:auto; min-height:280px; }
+.dapps .dapp .btn--small { margin-top:auto; }
