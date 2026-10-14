@@ -2,7 +2,7 @@
  * H1 scramble-decode. Same behaviour as fhenix.io today, with one
  * change: the word cycle ends and locks on "(mainnet)".
  *
- *   (confid*ntial) → (pr*vate) → (encrypt*d) → (sh*elded) → (mainnet)  ■ locked
+ *   Each privacy word alternates with (mainnet); the final (mainnet) stays locked.
  *
  * After settling, letters react to pointer hover or touch, then restore mainnet.
  */
@@ -12,7 +12,7 @@ const STATIC = new Set(["(", ")", "*"]);
 const rand = () => SCRAMBLE[Math.floor(Math.random() * SCRAMBLE.length)];
 
 export function createDecoder(el, options = {}) {
-  const words = options.words ?? ["(confid*ntial)", "(pr*vate)", "(encrypt*d)", "(sh*elded)", "(mainnet)"];
+  const words = options.words ?? ["(confid*ntial)", "(mainnet)", "(pr*vate)", "(mainnet)", "(encrypt*d)", "(mainnet)", "(sh*elded)", "(mainnet)"];
   const charDelay = options.charDelay ?? 50; // ms per revealed character
   const hold = options.hold ?? 2000; // ms a word stays before the next decode
   const onWord = options.onWord ?? (() => {});

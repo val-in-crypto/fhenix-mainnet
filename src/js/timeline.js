@@ -14,7 +14,7 @@ export function buildTimeline({ dollar } = {}) {
   const handles = qa(".plate__handle");
 
   const decoder = createDecoder(decodeEl, {
-    words: ["(confid*ntial)", "(pr*vate)", "(encrypt*d)", "(sh*elded)", "(mainnet)"],
+    words: ["(confid*ntial)", "(mainnet)", "(pr*vate)", "(mainnet)", "(encrypt*d)", "(mainnet)", "(sh*elded)", "(mainnet)"],
     charDelay: 50,
     hold: 2000,
     hover: !reducedMotion,
