@@ -484,3 +484,8 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
 
 .dapp__logo--image { overflow:hidden; }
 .dapp__logo--image img[src$="fhenix-app-cover.png"] { transform:scale(1.8); }
+
+.dapp__logo--fluton { background:#001623; border-radius:0; }
+.dapp__logo--fluton img { border-radius:0; }
+.dapp__logo--fhenix { position:relative; }
+.dapp__logo--fhenix::after { content:""; position:absolute; inset:0; border:1px solid #e5e7e9; pointer-events:none; }
