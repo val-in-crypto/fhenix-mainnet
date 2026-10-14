@@ -67,6 +67,7 @@ export function initFusdAnimation() {
     timeline.set(coins, { x: i => starts[i].x, y: i => starts[i].y, rotation: i => starts[i].rotation, scale: 1 }, 16.3);
     timeline.to(coins, { opacity: 1, duration: .7 }, 16.3);
     timeline.to(caption, { opacity: 1, duration: .7 }, 16.3);
+    timeline.timeScale(1.25);
     sync();
   }
   function sync() {
