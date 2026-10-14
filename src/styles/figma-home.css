@@ -489,3 +489,12 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
 .dapp__logo--fluton img { border-radius:0; }
 .dapp__logo--fhenix { position:relative; }
 .dapp__logo--fhenix::after { content:""; position:absolute; inset:0; border:1px solid #e5e7e9; pointer-events:none; }
+
+/* Original Figma token layers, with the coin stream free to cross the section. */
+.value__art--fusd { left:640px; width:800px; pointer-events:none; }
+.value__copy > * { z-index:1; }
+.fusd-announcement text { font-size:72px; letter-spacing:0; }
+@media(max-width:1023px) {
+ .value__art--fusd { left:auto; width:100%; aspect-ratio:800 / 560; }
+ .value__art--fusd .fusd-scene { overflow:hidden; }
+}
