@@ -503,3 +503,10 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
 @media(max-width:767px) {
  .dual .token-grid { display:none; }
 }
+
+/* Center the visible artwork, including the offset in the Figma token export. */
+@media(max-width:1023px) {
+ .dual .token-art__viewport { left:0; top:0; width:100%; height:100%; }
+ .dual .token-label--private,.dual .token-label--confidential { left:251.75px; }
+ .value__art--fusd .fusd-composition { transform:translateX(-32.15px); }
+}
