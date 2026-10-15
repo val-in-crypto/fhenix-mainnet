@@ -403,8 +403,6 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
  .quest-journey__fill { height:100%; }
 }
 
-/* Keep Carter’s head inside the square portrait crop at every breakpoint. */
-.person .person__photo .person__portrait--carter { object-position:center top; }
 
 /* Smaller supporting copy for the token modes section. */
 .dual .lead { font-size:20px; line-height:1.4; }
