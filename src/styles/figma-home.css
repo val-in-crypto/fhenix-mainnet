@@ -129,7 +129,11 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
 .mobile-toggle { display:none; }
 .motion-toggle { position:fixed; right:14px; bottom:14px; z-index:25; width:34px; height:34px; background:#fff; color:var(--ink); border:1px solid #00162330; box-shadow:0 2px 6px #00162312; font:14px var(--font-mono); }
 .motion-paused * { animation-play-state:paused!important; }
-@media(min-width:1024px) { .dapps .h2 { white-space:nowrap; } }
+@media(min-width:1024px) {
+ .dapps .h2 { white-space:nowrap; }
+ /* Keep the longer supporting sentence with the CTAs on laptop screens. */
+ .hero .caption { left:167px; top:535px; width:900px; text-align:center; font-size:20px; line-height:1.45; }
+}
 @media(max-width:1023px) {
  .page { padding-bottom:0; }
  .h2 { font-size:36px; line-height:1.08; }
