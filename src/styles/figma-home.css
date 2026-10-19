@@ -131,8 +131,9 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
 .motion-paused * { animation-play-state:paused!important; }
 @media(min-width:1024px) {
  .dapps .h2 { white-space:nowrap; }
- /* Keep the longer supporting sentence with the CTAs on laptop screens. */
- .hero .caption { left:167px; top:535px; width:900px; text-align:center; font-size:20px; line-height:1.45; }
+ /* Preserve the Figma caption placement while fitting shorter laptop windows. */
+ .hero__stage { height:clamp(600px,calc(100svh / var(--s) - var(--nav-h)),var(--hero-h)); }
+ .hero .caption { left:95px; top:auto; bottom:32px; width:228px; text-align:left; font-size:16px; line-height:1.35; }
 }
 @media(max-width:1023px) {
  .page { padding-bottom:0; }
