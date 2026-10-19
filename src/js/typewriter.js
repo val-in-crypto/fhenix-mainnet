@@ -10,7 +10,8 @@ export function splitWords(el) {
   if (el.dataset.split) return [...el.querySelectorAll(".word")];
   const text = el.textContent.trim();
   el.textContent = "";
-  const words = text.split(/\s+/).map((w, i, arr) => {
+  // Preserve non-breaking spaces so brand phrases stay together during typing.
+  const words = text.split(/[ \t\r\n]+/).map((w, i, arr) => {
     const span = document.createElement("span");
     span.className = "word";
     span.textContent = w;
