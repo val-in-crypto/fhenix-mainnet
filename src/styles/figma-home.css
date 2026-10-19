@@ -358,7 +358,7 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
   .mobile-toggle[aria-expanded="true"] { background:none; }
   .mobile-toggle[aria-expanded="true"]::before { content:"×"; font:28px/1 var(--font-sans); }
   .nav__links.is-open { top:48px; }
-  .hero__stage { display:block; height:757px; padding:0; overflow:hidden; }
+  .hero__stage { display:block; height:auto; min-height:757px; padding:493px 0 0; overflow:hidden; }
   .hero .subtitle,.hero .plate { display:none; }
   .hero .tagline { position:absolute; top:76px; left:50%; transform:translateX(-50%); width:267px; margin:0; font-size:24px; line-height:normal; font-weight:500; text-align:center; }
   .hero .title { display:contents; }
@@ -367,8 +367,8 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
   .hero .ctas .btn { width:224px; height:48px; font-size:20px; }
   .hero-cta-desktop { display:none; }
   .hero-cta-mobile { display:inline; }
-  .hero .caption { position:absolute; top:493px; left:calc(50% - 162px); width:228px; text-align:left; font-size:14px; line-height:normal; }
-  .hero .dollar { position:absolute; top:546px; left:calc(50% - 259px); width:520px; height:260px; aspect-ratio:auto; overflow:visible; }
+  .hero .caption { position:relative; top:auto; left:auto; width:min(228px,calc(100% - 40px)); margin:0 auto; text-align:center; font-size:14px; line-height:1.4; }
+  .hero .dollar { position:relative; top:auto; left:auto; margin:24px 0 0 calc(50% - 260px); width:520px; height:260px; aspect-ratio:auto; overflow:visible; }
   .hero .dollar__rot { inset:0; width:520px; height:260px; transform:none; }
   .hero .dollar__coin img { width:89px; height:89px; }
   .hero .field { left:calc(50% - 740.5px); width:1482px; top:-95px; bottom:0; }
@@ -424,7 +424,7 @@ html:not(.js) [data-reveal] { opacity:1; transform:none; }
   .block,.hero .caption { text-align:center; }
   .block__head,.block .lead { margin-left:auto; margin-right:auto; }
   .block .actions { justify-content:center; }
-  .hero .caption { left:50%; transform:translateX(-50%); }
+  .hero .caption { left:auto; transform:none; }
   .dapp { align-items:stretch; text-align:left; }
   .dapp p { margin-left:0; margin-right:auto; }
   .dapp .btn--small { align-self:flex-start; }
